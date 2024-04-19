@@ -20,6 +20,9 @@ public class NewServlet extends HttpServlet {
 	        throws ServletException, IOException {
 	    
 	    // CSRF対策
+	    request.setAttribute("_token", request.getSession().getId());
+	    
+	    // おまじないとしてのインスタンスを生成
 		request.setAttribute("message", new Message());
 		
 		var rd = request.getRequestDispatcher("/WEB-INF/views/messages/new.jsp");
