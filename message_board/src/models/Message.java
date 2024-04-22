@@ -23,7 +23,6 @@ import org.hibernate.type.descriptor.java.JdbcTimestampTypeDescriptor.TimestampM
             name = "getMessagesCount",
             query = "SELECT COUNT(m) FROM Message AS m"
             )
-    
 })
 
 @Table(name = "messages")
