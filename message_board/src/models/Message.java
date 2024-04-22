@@ -18,7 +18,12 @@ import org.hibernate.type.descriptor.java.JdbcTimestampTypeDescriptor.TimestampM
     @NamedQuery(
             name = "getAllMessages",
             query = "SELECT m FROM Message AS m ORDER BY m.id DESC"
-    ) 
+            ),
+    @NamedQuery(
+            name = "getMessagesCount",
+            query = "SELECT COUNT(m) FROM Message AS m"
+            )
+    
 })
 
 @Table(name = "messages")
